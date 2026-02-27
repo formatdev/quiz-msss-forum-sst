@@ -1,0 +1,8 @@
+**Constitution Test Result**
+- I executed `/speckit.constitution` in validation mode with input `test`.
+- Current constitution is already concrete at `.specify/memory/constitution.md:1` (no `[PLACEHOLDER]` tokens detected).
+- No actionable amendment was inferable from `test`, so version remains `1.0.0` at `.specify/memory/constitution.md:98` (no bump needed).
+- Consistency checks look aligned in `.specify/templates/plan-template.md:30`, `.specify/templates/spec-template.md:8`, and `.specify/templates/tasks-template.md:11`.
+- I could not perform the required file overwrite/prepend step because this run is read-only (`sandbox_mode=read-only`).
+
+If you want, I can generate the exact Sync Impact Report block and full updated constitution text for you to paste manually.

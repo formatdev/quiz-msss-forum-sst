@@ -1,0 +1,1 @@
+I checked the repo contents; next I’ll verify configured MCP resources for `speckit`.
