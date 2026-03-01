@@ -3,6 +3,7 @@ import { getDb } from '../db/client.js';
 import { metrics } from '../observability/metrics.js';
 import { AdminInitializeService } from '../services/admin-initialize-service.js';
 import { buildSessionExportCsv } from '../services/session-csv-export-service.js';
+import { exportRateLimit } from './middleware/rate-limit.js';
 
 function insertAudit(success: boolean): void {
   const db = getDb();
@@ -17,7 +18,7 @@ function insertAudit(success: boolean): void {
 export async function registerAdminRoutes(app: FastifyInstance): Promise<void> {
   const initializeService = new AdminInitializeService();
 
-  app.get('/api/admin/export.csv', async (_request, reply) => {
+  app.get('/api/admin/export.csv', { preHandler: exportRateLimit }, async (_request, reply) => {
     try {
       const csv = buildSessionExportCsv();
       const timestamp = new Date().toISOString().replace(/[:.]/g, '-');
