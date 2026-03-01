@@ -1,21 +1,17 @@
 <!--
 Sync Impact Report
-- Version change: 1.0.0 -> 1.1.0
+- Version change: 1.1.0 -> 2.0.0
 - Modified principles:
-  - I. Kiosk-First Audience Experience (Non-Negotiable): clarified accessibility and kiosk reliability language
-  - II. Deployment Reality Over Theory: clarified publishability and runtime config expectations
-  - III. Durable Results and Portable Data: clarified CSV requirement and XLSX optionality rationale
-  - IV. Content-Driven Quiz Engine: clarified Word-driven content lifecycle expectations
-  - V. Simplicity, Security, and Maintainability: clarified security baseline and privacy-safe logging scope
+  - III. Durable Results and Portable Data: updated export access policy to public access by default
+  - V. Simplicity, Security, and Maintainability: redefined security baseline to no authentication by design, with throttling and hardening controls
 - Added sections:
-  - Governance > Semantic Versioning Policy
-  - Governance > Compliance Review Expectations
+  - Technical Standards > Public Access Policy
 - Removed sections:
-  - None
+  - Delivery Workflow and Quality Gates > Phase 2 item requiring admin-protected export trigger
 - Templates requiring updates:
-  - ✅ .specify/templates/plan-template.md
-  - ✅ .specify/templates/spec-template.md
-  - ✅ .specify/templates/tasks-template.md
+  - ✅ .specify/templates/plan-template.md (no change required)
+  - ✅ .specify/templates/spec-template.md (no change required)
+  - ✅ .specify/templates/tasks-template.md (no change required)
   - ⚠ pending: .specify/templates/commands/*.md (directory missing)
 - Follow-up TODOs:
   - TODO(COMMAND_TEMPLATES_DIR): create .specify/templates/commands/ if command templates are adopted later
@@ -46,6 +42,7 @@ Sync Impact Report
 - Rationale: trade fair outcomes must remain available for reporting and repeatable scoring verification.
 - Quiz results MUST persist across container restarts via mounted storage or external database.
 - The system MUST support CSV export of results; XLSX export SHOULD be provided behind a feature flag.
+- Export endpoints MUST be publicly accessible by default (no authentication or authorization gate).
 - Results schema MUST support anonymous session id and optional nickname only; no personal data collection is allowed.
 - Leaderboard logic MUST be deterministic and reproducible from persisted results.
 
@@ -60,7 +57,8 @@ Sync Impact Report
 - Rationale: booth software must stay stable, supportable, and safe with a small operational footprint.
 - Prefer a lightweight, maintainable web stack; avoid heavy enterprise architecture.
 - All user input MUST be validated server-side; output MUST be safely encoded in UI.
-- Use secure defaults: HTTPS behind Traefik, non-root container user, pinned dependencies, basic rate limiting on result submission and export endpoints.
+- Use secure defaults consistent with public-access policy: HTTPS behind Traefik, non-root container user, pinned dependencies, and basic rate limiting on result submission and export endpoints.
+- Authentication/authorization layers are out of scope unless explicitly reintroduced by a future constitution amendment.
 - Logging MUST avoid personal data and include only operational and anonymous gameplay events needed for support.
 
 ## Technical Standards
@@ -70,6 +68,11 @@ Sync Impact Report
 - Default storage: SQLite file on persistent Docker volume unless a managed DB is explicitly requested.
 - API contracts: versioned HTTP JSON API for quiz flow, leaderboard, and export.
 - Export formats: `text/csv` required; `application/vnd.openxmlformats-officedocument.spreadsheetml.sheet` optional.
+
+### Public Access Policy
+- All pages and endpoints are publicly accessible by default.
+- Public access MUST be paired with operational safeguards: throttling, robust input validation, and abuse-aware logging.
+- If access control is required later, constitution amendment is mandatory before spec/plan updates.
 
 ### User Flow Contract
 1. Language selection (FR/DE/EN).
@@ -98,7 +101,7 @@ Sync Impact Report
 4. Implement congratulations page with score + ranking.
 
 ### Phase 2: Operations and Content
-1. Implement CSV export endpoint and admin-protected trigger.
+1. Implement CSV export endpoint with public access and throttling safeguards.
 2. Add optional XLSX export.
 3. Add Word-to-content ingestion workflow and verification checklist.
 4. Add kiosk hardening options (fullscreen mode guidance, inactivity reset timer).
@@ -130,4 +133,4 @@ Sync Impact Report
   3. Version increment and amendment date update.
 - If a requirement conflicts with this constitution, this constitution takes precedence unless formally amended.
 
-**Version**: 1.1.0 | **Ratified**: 2026-02-27 | **Last Amended**: 2026-02-27
+**Version**: 2.0.0 | **Ratified**: 2026-02-27 | **Last Amended**: 2026-02-27

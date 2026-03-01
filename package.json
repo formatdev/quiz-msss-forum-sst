@@ -1,0 +1,17 @@
+{
+  "name": "quiz-msss-forum-sst",
+  "private": true,
+  "version": "0.1.0",
+  "workspaces": [
+    "backend",
+    "frontend",
+    "shared"
+  ],
+  "scripts": {
+    "build": "npm run build --workspaces",
+    "typecheck": "npm run typecheck --workspaces",
+    "test": "npm run test --workspaces",
+    "lint": "npm run lint --workspaces",
+    "seed:questions": "npx tsx scripts/seed-questions.ts"
+  }
+}

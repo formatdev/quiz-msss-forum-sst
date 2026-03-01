@@ -1,0 +1,16 @@
+{
+  "name": "@quiz/shared",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "main": "types/index.ts",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "echo \"no tests yet\"",
+    "lint": "echo \"lint placeholder\""
+  },
+  "devDependencies": {
+    "typescript": "^5.8.2"
+  }
+}

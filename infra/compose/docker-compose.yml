@@ -1,0 +1,28 @@
+version: "3.9"
+
+services:
+  quiz-app:
+    build:
+      context: ../..
+      dockerfile: infra/docker/Dockerfile
+    image: formatdev/quiz-msss-forum-sst:0.1.0
+    container_name: quiz-msss-forum-sst
+    environment:
+      NODE_ENV: production
+      PORT: 3000
+      DB_PATH: /data/quiz.db
+      EXPORT_RATE_LIMIT_PER_MIN: 30
+      APP_BASE_URL: https://quiz.example.org
+    volumes:
+      - quiz_data:/data
+    ports:
+      - "3000:3000"
+    restart: unless-stopped
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.quiz.rule=Host(`quiz.example.org`)"
+      - "traefik.http.routers.quiz.entrypoints=websecure"
+      - "traefik.http.services.quiz.loadbalancer.server.port=3000"
+
+volumes:
+  quiz_data:
