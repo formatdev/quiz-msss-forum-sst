@@ -25,6 +25,8 @@ EXPOSE 3000
 COPY --from=base /app/backend/dist ./backend/dist
 COPY --from=base /app/backend/package.json ./backend/package.json
 COPY --from=base /app/node_modules ./node_modules
+COPY --from=base /app/backend/src/db/migrations ./backend/dist/db/migrations
+COPY data ./data
 
 RUN addgroup -S app && adduser -S app -G app
 USER app
