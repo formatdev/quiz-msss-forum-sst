@@ -1,4 +1,4 @@
-FROM node:20-alpine AS base
+FROM node:22-alpine AS base
 WORKDIR /app
 
 COPY package.json pnpm-workspace.yaml tsconfig.base.json ./
@@ -15,7 +15,7 @@ COPY specs specs
 
 RUN npm run build -ws
 
-FROM node:20-alpine AS runtime
+FROM node:22-alpine AS runtime
 WORKDIR /app
 ENV NODE_ENV=production
 ENV PORT=3000
