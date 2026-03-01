@@ -55,7 +55,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v5
         with:
-          images: formatdev/quiz-msss-forum-sst
+          images: esst/quiz-msss-forum-sst
           tags: |
             type=raw,value=latest
             type=sha,format=short
