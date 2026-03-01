@@ -115,6 +115,19 @@ function computeDurationMs(previousActivity: string | null, fallbackStart: strin
   return duration;
 }
 
+function isDuplicateSessionAnswerError(error: unknown): boolean {
+  if (!(error instanceof Error)) {
+    return false;
+  }
+  const message = error.message.toLowerCase();
+  return (
+    message.includes('unique') &&
+    message.includes('session_answers') &&
+    message.includes('session_id') &&
+    message.includes('question_id')
+  );
+}
+
 export class AnswerService {
   constructor(
     private readonly questionRepository = new QuestionRepository(),
@@ -177,29 +190,36 @@ export class AnswerService {
     const isCorrect = awardedPoints >= QUESTION_MAX_POINTS;
     const durationMs = computeDurationMs(session.last_activity_at, session.started_at);
 
-    db.prepare(
-      `
-      INSERT INTO session_answers (
-        session_id,
-        question_id,
-        selected_option_keys_json,
-        is_correct,
-        awarded_points,
-        max_points,
-        answered_at,
-        duration_ms
-      ) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
-      `
-    ).run(
-      input.sessionId,
-      input.questionId,
-      JSON.stringify(uniqueKeys),
-      isCorrect ? 1 : 0,
-      awardedPoints,
-      QUESTION_MAX_POINTS,
-      nowIso,
-      durationMs
-    );
+    try {
+      db.prepare(
+        `
+        INSERT INTO session_answers (
+          session_id,
+          question_id,
+          selected_option_keys_json,
+          is_correct,
+          awarded_points,
+          max_points,
+          answered_at,
+          duration_ms
+        ) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+        `
+      ).run(
+        input.sessionId,
+        input.questionId,
+        JSON.stringify(uniqueKeys),
+        isCorrect ? 1 : 0,
+        awardedPoints,
+        QUESTION_MAX_POINTS,
+        nowIso,
+        durationMs
+      );
+    } catch (error) {
+      if (isDuplicateSessionAnswerError(error)) {
+        return { status: 'already_answered' };
+      }
+      throw error;
+    }
     db.prepare('UPDATE sessions SET last_activity_at = ? WHERE id = ?').run(nowIso, input.sessionId);
 
     const hasMoreQuestions = this.questionRepository.hasRemainingQuestion(input.sessionId);
