@@ -1,0 +1,281 @@
+openapi: 3.0.3
+info:
+  title: Multilingual Touchscreen Quiz API
+  version: 0.1.0
+  description: API contract for kiosk quiz flow, leaderboard, and public exports.
+servers:
+  - url: https://quiz.example.org
+paths:
+  /api/health:
+    get:
+      summary: Health check
+      responses:
+        "200":
+          description: Service is healthy
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    example: ok
+                  time:
+                    type: string
+                    format: date-time
+                required: [status, time]
+
+  /api/sessions:
+    post:
+      summary: Start a quiz session
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/StartSessionRequest"
+      responses:
+        "201":
+          description: Session created
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/StartSessionResponse"
+
+  /api/sessions/{sessionId}/question:
+    get:
+      summary: Get next question for session
+      parameters:
+        - $ref: "#/components/parameters/SessionId"
+      responses:
+        "200":
+          description: Current question payload
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/QuestionView"
+        "204":
+          description: No more questions (session complete)
+
+  /api/sessions/{sessionId}/answers:
+    post:
+      summary: Submit answer and receive explanation
+      parameters:
+        - $ref: "#/components/parameters/SessionId"
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/SubmitAnswerRequest"
+      responses:
+        "200":
+          description: Answer evaluated
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/SubmitAnswerResponse"
+
+  /api/sessions/{sessionId}/result:
+    get:
+      summary: Get final result for session
+      parameters:
+        - $ref: "#/components/parameters/SessionId"
+      responses:
+        "200":
+          description: Final result summary
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/SessionResultResponse"
+
+  /api/leaderboard:
+    get:
+      summary: Get leaderboard entries
+      parameters:
+        - name: lang
+          in: query
+          required: false
+          schema:
+            $ref: "#/components/schemas/LanguageCode"
+      responses:
+        "200":
+          description: Leaderboard list
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  entries:
+                    type: array
+                    items:
+                      $ref: "#/components/schemas/LeaderboardEntry"
+                required: [entries]
+
+  /api/exports/results.csv:
+    get:
+      summary: Export results as CSV (public)
+      responses:
+        "200":
+          description: CSV export file
+          content:
+            text/csv:
+              schema:
+                type: string
+                format: binary
+        "429":
+          description: Rate limited
+
+  /api/exports/results.xlsx:
+    get:
+      summary: Export results as XLSX (public, optional capability)
+      responses:
+        "200":
+          description: XLSX export file
+          content:
+            application/vnd.openxmlformats-officedocument.spreadsheetml.sheet:
+              schema:
+                type: string
+                format: binary
+        "429":
+          description: Rate limited
+        "501":
+          description: XLSX export not enabled
+
+components:
+  parameters:
+    SessionId:
+      name: sessionId
+      in: path
+      required: true
+      schema:
+        type: string
+
+  schemas:
+    LanguageCode:
+      type: string
+      enum: [fr, de, en]
+
+    StartSessionRequest:
+      type: object
+      properties:
+        lang:
+          $ref: "#/components/schemas/LanguageCode"
+        nickname:
+          type: string
+          maxLength: 32
+          nullable: true
+      required: [lang]
+
+    StartSessionResponse:
+      type: object
+      properties:
+        sessionId:
+          type: string
+        totalQuestions:
+          type: integer
+        startedAt:
+          type: string
+          format: date-time
+      required: [sessionId, totalQuestions, startedAt]
+
+    QuestionView:
+      type: object
+      properties:
+        questionId:
+          type: string
+        type:
+          type: string
+          enum: [single, multiple]
+        prompt:
+          type: string
+        choices:
+          type: array
+          items:
+            $ref: "#/components/schemas/Choice"
+        imageKey:
+          type: string
+          nullable: true
+        progress:
+          $ref: "#/components/schemas/Progress"
+      required: [questionId, type, prompt, choices, progress]
+
+    Choice:
+      type: object
+      properties:
+        key:
+          type: string
+        label:
+          type: string
+      required: [key, label]
+
+    Progress:
+      type: object
+      properties:
+        current:
+          type: integer
+        total:
+          type: integer
+      required: [current, total]
+
+    SubmitAnswerRequest:
+      type: object
+      properties:
+        questionId:
+          type: string
+        selectedKeys:
+          type: array
+          items:
+            type: string
+      required: [questionId, selectedKeys]
+
+    SubmitAnswerResponse:
+      type: object
+      properties:
+        correct:
+          type: boolean
+        awardedPoints:
+          type: integer
+        maxPoints:
+          type: integer
+        correctKeys:
+          type: array
+          items:
+            type: string
+        explanation:
+          type: string
+        friendlyFeedback:
+          type: string
+      required: [correct, awardedPoints, maxPoints, correctKeys, explanation, friendlyFeedback]
+
+    SessionResultResponse:
+      type: object
+      properties:
+        score:
+          type: integer
+        maxScore:
+          type: integer
+        percentage:
+          type: number
+          format: float
+        leaderboard:
+          type: array
+          items:
+            $ref: "#/components/schemas/LeaderboardEntry"
+      required: [score, maxScore, percentage, leaderboard]
+
+    LeaderboardEntry:
+      type: object
+      properties:
+        rank:
+          type: integer
+        nickname:
+          type: string
+        score:
+          type: integer
+        maxScore:
+          type: integer
+        percentage:
+          type: number
+          format: float
+      required: [rank, nickname, score, maxScore, percentage]

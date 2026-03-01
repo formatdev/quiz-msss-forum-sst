@@ -1,0 +1,14 @@
+http:
+  routers:
+    quiz-router:
+      rule: "Host(`quiz.example.org`)"
+      entryPoints:
+        - websecure
+      service: quiz-service
+      tls: {}
+
+  services:
+    quiz-service:
+      loadBalancer:
+        servers:
+          - url: "http://quiz-app:3000"

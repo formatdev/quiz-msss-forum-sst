@@ -1,0 +1,658 @@
+[
+  {
+    "id": "q-001",
+    "imageKey": "q-001.png",
+    "type": "multiple",
+    "topicTag": "health-basics",
+    "translations": {
+      "fr": {
+        "question": "En Europe, quels sont les deux types de cancers les plus fréquents attribués à la consommation d’alcool ?",
+        "explanation": "Une consommation faible à modérée augmente le risque de cancer du sein (jusqu’à 10 %). Chez les hommes, le cancer du côlon est le plus fréquent.",
+        "choices": {
+          "A": "Cancer de l’œsophage",
+          "B": "Cancer du sein chez la femme",
+          "C": "Cancer du foie",
+          "D": "Cancer du côlon"
+        }
+      },
+      "de": {
+        "question": "Welche zwei Krebsarten treten in Europa am häufigsten im Zusammenhang mit Alkoholkonsum auf?",
+        "explanation": "Ein geringer bis moderater Alkoholkonsum erhöht das Brustkrebsrisiko (bis zu 10 %). Bei Männern ist Darmkrebs am häufigsten.",
+        "choices": {
+          "A": "Speiseröhrenkrebs",
+          "B": "Brustkrebs bei Frauen",
+          "C": "Leberkrebs",
+          "D": "Darmkrebs"
+        }
+      },
+      "en": {
+        "question": "In Europe, which two types of cancer are most frequently linked to alcohol consumption?",
+        "explanation": "Low to moderate alcohol consumption increases the risk of breast cancer (up to 10%). In men, colorectal cancer is the most common.",
+        "choices": {
+          "A": "Esophageal cancer",
+          "B": "Breast cancer in women",
+          "C": "Liver cancer",
+          "D": "Colorectal cancer"
+        }
+      }
+    },
+    "correctAnswers": [
+      "B",
+      "D"
+    ]
+  },
+  {
+    "id": "q-002",
+    "imageKey": "q-002.png",
+    "type": "single",
+    "topicTag": "health-basics",
+    "translations": {
+      "fr": {
+        "question": "Boire un verre d’alcool de temps en temps est bon pour le cœur.",
+        "explanation": "C’est un mythe. Les études montrent que l’alcool n’a pas d’effet protecteur sur le cœur et augmente la tension artérielle et le risque d’AVC.",
+        "choices": {
+          "A": "Vrai",
+          "B": "Faux"
+        }
+      },
+      "de": {
+        "question": "Ein gelegentliches Glas Alkohol ist gut für das Herz.",
+        "explanation": "Das ist ein Mythos. Studien zeigen, dass Alkohol keinen schützenden Effekt auf das Herz hat und Blutdruck sowie Schlaganfallrisiko erhöht.",
+        "choices": {
+          "A": "Richtig",
+          "B": "Falsch"
+        }
+      },
+      "en": {
+        "question": "Drinking a glass of alcohol from time to time is good for the heart.",
+        "explanation": "This is a myth. Scientific studies show no cardiovascular benefit and an increased risk of high blood pressure and stroke.",
+        "choices": {
+          "A": "True",
+          "B": "False"
+        }
+      }
+    },
+    "correctAnswers": [
+      "B"
+    ]
+  },
+  {
+    "id": "q-003",
+    "imageKey": "q-003.png",
+    "type": "single",
+    "topicTag": "health-basics",
+    "translations": {
+      "fr": {
+        "question": "Selon les recommandations, combien de temps d’activité physique modérée un adulte devrait-il pratiquer par semaine ?",
+        "explanation": "150 minutes correspondent par exemple à 30 minutes par jour, 5 jours par semaine.",
+        "choices": {
+          "A": "30 minutes par semaine",
+          "B": "1 heure par semaine",
+          "C": "Au moins 150 minutes par semaine",
+          "D": "5 heures par jour"
+        }
+      },
+      "de": {
+        "question": "Wie viel moderate körperliche Aktivität wird pro Woche für Erwachsene empfohlen?",
+        "explanation": "150 Minuten entsprechen z. B. 30 Minuten pro Tag an 5 Tagen pro Woche.",
+        "choices": {
+          "A": "30 Minuten pro Woche",
+          "B": "1 Stunde pro Woche",
+          "C": "Mindestens 150 Minuten pro Woche",
+          "D": "5 Stunden pro Tag"
+        }
+      },
+      "en": {
+        "question": "According to recommendations, how much moderate physical activity should an adult do per week?",
+        "explanation": "150 minutes can be achieved by doing 30 minutes per day, 5 days a week.",
+        "choices": {
+          "A": "30 minutes per week",
+          "B": "1 hour per week",
+          "C": "At least 150 minutes per week",
+          "D": "5 hours per day"
+        }
+      }
+    },
+    "correctAnswers": [
+      "C"
+    ]
+  },
+  {
+    "id": "q-004",
+    "imageKey": "q-004.png",
+    "type": "single",
+    "topicTag": "mental-health",
+    "translations": {
+      "fr": {
+        "question": "Quel effet l’activité physique peut-elle avoir sur le moral et la santé mentale ?",
+        "explanation": "L’activité physique libère des hormones du bien-être comme les endorphines.",
+        "choices": {
+          "A": "Aucun effet",
+          "B": "Elle augmente l’anxiété",
+          "C": "Elle améliore l’humeur et réduit le stress",
+          "D": "Elle provoque des troubles du sommeil"
+        }
+      },
+      "de": {
+        "question": "Welche Wirkung hat körperliche Aktivität auf Stimmung und mentale Gesundheit?",
+        "explanation": "Körperliche Aktivität setzt Wohlfühlhormone wie Endorphine frei.",
+        "choices": {
+          "A": "Keine Wirkung",
+          "B": "Sie erhöht Angst",
+          "C": "Sie verbessert die Stimmung und reduziert Stress",
+          "D": "Sie verursacht Schlafstörungen"
+        }
+      },
+      "en": {
+        "question": "What effect can physical activity have on mood and mental health?",
+        "explanation": "Physical activity releases feel-good hormones such as endorphins.",
+        "choices": {
+          "A": "No effect",
+          "B": "It increases anxiety",
+          "C": "It improves mood and reduces stress",
+          "D": "It causes sleep disorders"
+        }
+      }
+    },
+    "correctAnswers": [
+      "C"
+    ]
+  },
+  {
+    "id": "q-005",
+    "imageKey": "q-005.png",
+    "type": "single",
+    "topicTag": "addictions",
+    "translations": {
+      "fr": {
+        "question": "Pourquoi l’accompagnement par un professionnel de santé augmente-t-il les chances de réussir un sevrage tabagique ?",
+        "explanation": "Sans aide, seules 3 à 5 % des personnes arrêtent durablement. Avec accompagnement et traitement, le taux atteint 15 à 25 % à 6 mois.",
+        "choices": {
+          "A": "Le taux de réussite sans aide est faible",
+          "B": "L’accompagnement et le traitement augmentent le succès",
+          "C": "Le soutien renforce la motivation et prévient les rechutes",
+          "D": "Toutes les réponses ci-dessus"
+        }
+      },
+      "de": {
+        "question": "Warum erhöht die Begleitung durch Fachpersonal die Erfolgschancen beim Rauchstopp?",
+        "explanation": "Ohne Hilfe schaffen es nur 3–5 %. Mit professioneller Begleitung und Therapie liegt die Erfolgsquote bei 15–25 % nach 6 Monaten.",
+        "choices": {
+          "A": "Die Erfolgsquote ohne Hilfe ist niedrig",
+          "B": "Begleitung und Behandlung erhöhen den Erfolg",
+          "C": "Unterstützung stärkt Motivation und verhindert Rückfälle",
+          "D": "Alle oben genannten Antworten"
+        }
+      },
+      "en": {
+        "question": "Why does support from a health professional increase the chances of quitting smoking?",
+        "explanation": "Without help, only 3–5% succeed long-term. With professional support and treatment, success rates reach 15–25% after 6 months.",
+        "choices": {
+          "A": "Success rates without help are low",
+          "B": "Support combined with treatment improves success",
+          "C": "Support boosts motivation and prevents relapse",
+          "D": "All of the above"
+        }
+      }
+    },
+    "correctAnswers": [
+      "D"
+    ]
+  },
+  {
+    "id": "q-006",
+    "imageKey": "q-006.png",
+    "type": "multiple",
+    "topicTag": "addictions",
+    "translations": {
+      "fr": {
+        "question": "Connaissez-vous le programme de sevrage tabagique de la Direction de la santé ?",
+        "explanation": "Le programme d’aide au sevrage tabagique propose des consultations régulières chez le médecin de votre choix pendant 8 mois. Si nécessaire, des médicaments peuvent être prescrits et sont remboursés à 50 % uniquement à la fin du programme (au 8ème mois), avec un remboursement maximum de 100 €.",
+        "choices": {
+          "A": "Oui",
+          "B": "Non"
+        }
+      },
+      "de": {
+        "question": "Kennen Sie das Rauchstopp-Programm der Gesundheitsdirektion?",
+        "explanation": "Das Programm bietet regelmäßige Konsultationen bei einer Ärztin/einem Arzt Ihrer Wahl über 8 Monate. Falls nötig, werden Entwöhnungsmedikamente verschrieben und am Ende des Programms (im 8. Monat) zu 50 % erstattet, bis maximal 100 €.",
+        "choices": {
+          "A": "Ja",
+          "B": "Nein"
+        }
+      },
+      "en": {
+        "question": "Do you know the smoking cessation program from the Directorate of Health?",
+        "explanation": "The program provides regular consultations with a doctor of your choice over 8 months. If needed, cessation medicines can be prescribed and are reimbursed at 50% only at the end of the program (month 8), up to a maximum reimbursement of €100.",
+        "choices": {
+          "A": "Yes",
+          "B": "No"
+        }
+      }
+    },
+    "correctAnswers": ["Any"
+    ]
+  },
+  {
+    "id": "q-007",
+    "imageKey": "q-007.png",
+    "type": "single",
+    "topicTag": "nutrition",
+    "translations": {
+      "fr": {
+        "question": "Les produits bio et light sont toujours la meilleure option ?",
+        "explanation": "Pas toujours. Ils peuvent être intéressants, mais ce n’est pas automatique : tout dépend de leur composition, des besoins nutritionnels et des quantités consommées. Il est essentiel de lire la liste des ingrédients.",
+        "choices": {
+          "A": "Vrai",
+          "B": "Faux"
+        }
+      },
+      "de": {
+        "question": "Bio- und Light-Produkte sind immer die beste Wahl?",
+        "explanation": "Nicht immer. Sie können sinnvoll sein, aber nicht automatisch: Es hängt von der Zusammensetzung, den Ernährungsbedürfnissen und den verzehrten Mengen ab. Entscheidend ist, die Zutatenliste zu lesen.",
+        "choices": {
+          "A": "Richtig",
+          "B": "Falsch"
+        }
+      },
+      "en": {
+        "question": "Organic and “light” products are always the best option.",
+        "explanation": "Not always. They can be helpful, but it’s not automatic: it depends on the ingredients, nutritional needs, and the amounts consumed. Reading the ingredient list is essential.",
+        "choices": {
+          "A": "True",
+          "B": "False"
+        }
+      }
+    },
+    "correctAnswers": [
+      "B"
+    ]
+  },
+  {
+    "id": "q-008",
+    "imageKey": "q-008.png",
+    "type": "single",
+    "topicTag": "nutrition",
+    "translations": {
+      "fr": {
+        "question": "Sauter des repas aide à perdre du poids ?",
+        "explanation": "Non. Sauter des repas peut déséquilibrer l’alimentation et entraîner une prise de poids à long terme. Cela peut provoquer de la fatigue et des fringales, ce qui nuit souvent à une perte de poids durable.",
+        "choices": {
+          "A": "Vrai",
+          "B": "Faux"
+        }
+      },
+      "de": {
+        "question": "Mahlzeiten auslassen hilft beim Abnehmen?",
+        "explanation": "Nein. Mahlzeiten auszulassen kann die Ernährung aus dem Gleichgewicht bringen und langfristig sogar zu Gewichtszunahme führen. Es kann Müdigkeit und Heißhunger auslösen und erschwert oft eine nachhaltige Gewichtsabnahme.",
+        "choices": {
+          "A": "Richtig",
+          "B": "Falsch"
+        }
+      },
+      "en": {
+        "question": "Skipping meals helps you lose weight.",
+        "explanation": "No. Skipping meals can unbalance your diet and lead to weight gain in the long run. It may cause fatigue and cravings, which often undermines sustainable weight loss.",
+        "choices": {
+          "A": "True",
+          "B": "False"
+        }
+      }
+    },
+    "correctAnswers": [
+      "B"
+    ]
+  },
+  {
+    "id": "q-009",
+    "imageKey": "q-009.png",
+    "type": "single",
+    "topicTag": "health-basics",
+    "translations": {
+      "fr": {
+        "question": "Le Code du travail au Luxembourg prévoit-il des pauses pour l’allaitement ?",
+        "explanation": "Selon l’article L.336-3 du Code du travail : à la demande de la salariée allaitante, l’employeur doit accorder un temps d’allaitement pendant la journée de travail (2x45 minutes pour un temps plein). Ce temps est compté comme du temps de travail effectif et rémunéré normalement.",
+        "choices": {
+          "A": "Vrai",
+          "B": "Faux"
+        }
+      },
+      "de": {
+        "question": "Sieht das luxemburgische Arbeitsgesetz Stillpausen vor?",
+        "explanation": "Gemäß Artikel L.336-3 des Arbeitsgesetzbuchs muss der Arbeitgeber auf Antrag stillenden Arbeitnehmerinnen Stillzeiten während des Arbeitstags gewähren (2×45 Minuten bei Vollzeit). Diese Zeit gilt als Arbeitszeit und wird normal vergütet.",
+        "choices": {
+          "A": "Richtig",
+          "B": "Falsch"
+        }
+      },
+      "en": {
+        "question": "Does Luxembourg labor law provide breastfeeding breaks?",
+        "explanation": "According to Article L.336-3 of the Labor Code, upon request, breastfeeding employees must be granted breastfeeding time during the workday (2×45 minutes for full-time). This time counts as working time and is paid normally.",
+        "choices": {
+          "A": "True",
+          "B": "False"
+        }
+      }
+    },
+    "correctAnswers": [
+      "A"
+    ]
+  },
+  {
+    "id": "q-010",
+    "imageKey": "q-010.png",
+    "type": "single",
+    "topicTag": "mental-health",
+    "translations": {
+      "fr": {
+        "question": "Pourquoi la collaboration avec le réseau extra-hospitalier dans le domaine de la santé mentale est-elle utile pour les entreprises ?",
+        "explanation": "Le réseau extra-hospitalier offre des services de proximité permettant d’orienter rapidement un salarié en difficulté vers un soutien professionnel, sans démarche médicale et sans stigmatisation. C’est une orientation simple, neutre et respectueuse de la confidentialité (ex. « Stressberodung » CSL/LLHM).",
+        "choices": {
+          "A": "Pour obtenir des informations médicales détaillées sur leurs salariés",
+          "B": "Pour orienter rapidement les collaborateurs vers des services de proximité adaptés",
+          "C": "Pour imposer un suivi obligatoire à tous les employés",
+          "D": "Pour externaliser totalement la gestion RH"
+        }
+      },
+      "de": {
+        "question": "Warum ist die Zusammenarbeit mit dem außerklinischen Netzwerk im Bereich psychische Gesundheit für Unternehmen sinnvoll?",
+        "explanation": "Außerklinische Angebote sind wohnortnah und ermöglichen eine schnelle Weiterleitung von Mitarbeitenden in Schwierigkeiten zu professioneller Unterstützung – ohne medizinische Schritte und ohne Stigmatisierung. Für Unternehmen ist es eine einfache, neutrale und vertrauliche Orientierung (z. B. „Stressberodung“ CSL/LLHM).",
+        "choices": {
+          "A": "Um detaillierte medizinische Informationen über Beschäftigte zu erhalten",
+          "B": "Um Mitarbeitende schnell an passende, wohnortnahe Angebote zu vermitteln",
+          "C": "Um eine Pflichtbetreuung für alle einzuführen",
+          "D": "Um das HR-Management vollständig auszulagern"
+        }
+      },
+      "en": {
+        "question": "Why is collaborating with the extra-hospital (community-based) mental health network useful for companies?",
+        "explanation": "Community-based services make it easier to quickly refer employees in difficulty to appropriate professional support—without medical procedures and without stigma. For companies, it’s a simple, neutral, and confidentiality-respecting referral pathway (e.g., “Stressberodung” CSL/LLHM).",
+        "choices": {
+          "A": "To obtain detailed medical information about employees",
+          "B": "To quickly refer employees to suitable local services",
+          "C": "To impose mandatory follow-up on all employees",
+          "D": "To fully outsource HR management"
+        }
+      }
+    },
+    "correctAnswers": [
+      "B"
+    ]
+  },
+  {
+    "id": "q-011",
+    "imageKey": "q-011.png",
+    "type": "single",
+    "topicTag": "addictions",
+    "translations": {
+      "fr": {
+        "question": "Quel rôle l’entreprise peut-elle jouer dans la prévention des addictions ?",
+        "explanation": "L’entreprise a un rôle essentiel : sensibiliser, repérer précocement, accompagner et orienter vers des ressources adaptées. L’objectif n’est ni de sanctionner ni de remplacer les professionnels de santé.",
+        "choices": {
+          "A": "Aucun, cela relève uniquement de la vie privée",
+          "B": "Sanctionner uniquement",
+          "C": "Mettre en place des actions de sensibilisation, repérage et accompagnement",
+          "D": "Remplacer les professionnels de santé"
+        }
+      },
+      "de": {
+        "question": "Welche Rolle kann ein Unternehmen bei der Suchtprävention spielen?",
+        "explanation": "Unternehmen können viel beitragen: sensibilisieren, frühzeitig erkennen, unterstützen und an passende Hilfsangebote verweisen. Ziel ist nicht zu sanktionieren oder Gesundheitsfachpersonen zu ersetzen.",
+        "choices": {
+          "A": "Keine – das ist reine Privatsache",
+          "B": "Nur sanktionieren",
+          "C": "Sensibilisierung, Früherkennung und Unterstützung/Weiterleitung ermöglichen",
+          "D": "Gesundheitsfachpersonen ersetzen"
+        }
+      },
+      "en": {
+        "question": "What role can a company play in addiction prevention?",
+        "explanation": "Companies can play a key role by raising awareness, identifying early signs, supporting employees, and referring them to appropriate resources. The goal is neither to punish nor to replace healthcare professionals.",
+        "choices": {
+          "A": "None—this is strictly private",
+          "B": "Only sanction",
+          "C": "Implement awareness, early identification, and support/referral actions",
+          "D": "Replace healthcare professionals"
+        }
+      }
+    },
+    "correctAnswers": [
+      "C"
+    ]
+  },
+  {
+    "id": "q-012",
+    "imageKey": "q-012.png",
+    "type": "single",
+    "topicTag": "addictions",
+    "translations": {
+      "fr": {
+        "question": "Quels sont les facteurs professionnels pouvant favoriser les addictions ?",
+        "explanation": "Le stress chronique, des exigences élevées, peu de contrôle sur son travail et un faible soutien social augmentent le risque de comportements addictifs. À l’inverse, une bonne ambiance, des horaires prévisibles et des programmes de prévention sont des facteurs protecteurs.",
+        "choices": {
+          "A": "Bonne ambiance d’équipe",
+          "B": "Charge de travail excessive, stress, manque d’autonomie",
+          "C": "Horaires réguliers et prévisibles",
+          "D": "Présence d’un programme de prévention"
+        }
+      },
+      "de": {
+        "question": "Welche arbeitsbezogenen Faktoren können Suchterkrankungen begünstigen?",
+        "explanation": "Chronischer Stress, hohe Anforderungen, wenig Kontrolle über die Arbeit und geringe soziale Unterstützung erhöhen das Risiko für Suchtverhalten. Eine gute Teamatmosphäre, planbare Arbeitszeiten und Präventionsprogramme wirken dagegen schützend.",
+        "choices": {
+          "A": "Gute Teamatmosphäre",
+          "B": "Übermäßige Arbeitsbelastung, Stress, wenig Autonomie",
+          "C": "Regelmäßige und vorhersehbare Arbeitszeiten",
+          "D": "Vorhandensein eines Präventionsprogramms"
+        }
+      },
+      "en": {
+        "question": "Which work-related factors can contribute to addictions?",
+        "explanation": "Chronic stress, high demands, low autonomy, and weak social support increase the risk of addictive behaviors. In contrast, good team climate, predictable schedules, and prevention programs are protective factors.",
+        "choices": {
+          "A": "Good team atmosphere",
+          "B": "Excessive workload, stress, lack of autonomy",
+          "C": "Regular and predictable schedules",
+          "D": "Having a prevention program"
+        }
+      }
+    },
+    "correctAnswers": [
+      "B"
+    ]
+  },
+  {
+    "id": "q-013",
+    "imageKey": "q-013.png",
+    "type": "multiple",
+    "topicTag": "health-basics",
+    "translations": {
+      "fr": {
+        "question": "Comment peut-on soulager les personnes souffrant d’acouphènes ? (plusieurs réponses possibles)",
+        "explanation": "Les médicaments peuvent aider s’ils traitent une cause identifiable (infection, inflammation, surdité brusque, maladie de Ménière) ou s’ils réduisent l’anxiété/l’insomnie associées. Les générateurs de bruit peuvent diminuer la perception de l’acouphène. Les thérapies psychologiques (notamment TCC) aident à mieux le tolérer et à réduire l’intensité perçue.",
+        "choices": {
+          "A": "Ce n’est pas possible",
+          "B": "Avec des médicaments",
+          "C": "Avec un générateur de bruit",
+          "D": "Avec une thérapie psychologique"
+        }
+      },
+      "de": {
+        "question": "Wie kann man Menschen mit Tinnitus helfen? (mehrere Antworten möglich)",
+        "explanation": "Medikamente können helfen, wenn eine behandelbare Ursache vorliegt (Infektion, Entzündung, Hörsturz, Morbus Menière) oder um Angst/Schlafstörungen zu lindern. Geräuschgeneratoren können den Tinnitus überdecken. Psychologische Therapien (v. a. KVT) verbessern den Umgang und senken die wahrgenommene Intensität.",
+        "choices": {
+          "A": "Das ist nicht möglich",
+          "B": "Mit Medikamenten",
+          "C": "Mit einem Geräuschgenerator",
+          "D": "Mit einer psychologischen Therapie"
+        }
+      },
+      "en": {
+        "question": "How can tinnitus sufferers be relieved? (multiple answers possible)",
+        "explanation": "Medication may help if it treats an identifiable cause (infection, inflammation, sudden hearing loss, Ménière’s disease) or reduces associated anxiety/insomnia. Noise generators can mask tinnitus and reduce perception. Psychological therapies (especially CBT) help the brain react differently, improving tolerance and reducing perceived intensity.",
+        "choices": {
+          "A": "It’s not possible",
+          "B": "With medication",
+          "C": "With a noise generator",
+          "D": "With psychological therapy"
+        }
+      }
+    },
+    "correctAnswers": [
+      "B",
+      "C",
+      "D"
+    ]
+  },
+  {
+    "id": "q-014",
+    "imageKey": "q-014.png",
+    "type": "single",
+    "topicTag": "noise-health",
+    "translations": {
+      "fr": {
+        "question": "À partir de quel niveau le bruit commence-t-il à nuire à votre santé si l’exposition est régulière ? (une seule réponse possible)",
+        "explanation": "Une exposition régulière à 60 dB (conversation normale / bureau animé) maintient le corps en stimulation permanente : stress, tension artérielle, fatigue. À long terme : sommeil, concentration et santé cardiovasculaire. À partir de 85 dB, l’audition est directement impactée.",
+        "choices": {
+          "A": "60 dB (Bureau animé / conversation normale)",
+          "B": "70 dB (Circulation urbaine / restaurant animé)",
+          "C": "85 dB (Atelier bruyant / tondeuse)",
+          "D": "100 dB (Marteau-piqueur / concert)"
+        }
+      },
+      "de": {
+        "question": "Ab welchem Lärmpegel beginnt regelmäßige Exposition Ihrer Gesundheit zu schaden? (nur eine Antwort möglich)",
+        "explanation": "Regelmäßige Belastung mit 60 dB (normales Gespräch / lebhaftes Büro) hält den Körper dauerhaft in Alarmbereitschaft: mehr Stress, höherer Blutdruck, Müdigkeit. Langfristig leidet Schlaf, Konzentration und Herz-Kreislauf-Gesundheit. Ab 85 dB wird das Gehör direkt geschädigt.",
+        "choices": {
+          "A": "60 dB (lebhaftes Büro / normales Gespräch)",
+          "B": "70 dB (Stadtverkehr / lebhaftes Restaurant)",
+          "C": "85 dB (laute Werkstatt / Rasenmäher)",
+          "D": "100 dB (Presslufthammer / Konzert)"
+        }
+      },
+      "en": {
+        "question": "From what noise level does regular exposure start to harm your health? (single answer)",
+        "explanation": "Regular exposure to 60 dB (normal conversation / busy office) keeps the body in a constant state of stimulation, increasing stress, blood pressure, and fatigue. Over time, it affects sleep, concentration, and cardiovascular health. From 85 dB, hearing is directly impacted.",
+        "choices": {
+          "A": "60 dB (Busy office / normal conversation)",
+          "B": "70 dB (Urban traffic / busy restaurant)",
+          "C": "85 dB (Noisy workshop / lawn mower)",
+          "D": "100 dB (Jackhammer / concert)"
+        }
+      }
+    },
+    "correctAnswers": [
+      "A"
+    ]
+  },
+  {
+    "id": "q-015",
+    "imageKey": "q-015.png",
+    "type": "single",
+    "topicTag": "nutrition",
+    "translations": {
+      "fr": {
+        "question": "Quel type de graisse est recommandé pour protéger votre cœur ?",
+        "explanation": "Les graisses insaturées d’origine végétale sont recommandées : huiles végétales (colza, olive, soja, tournesol, noix), oléagineux, graines (lin, chia) et aussi les poissons gras riches en oméga-3.",
+        "choices": {
+          "A": "Les graisses saturées d’origine animale",
+          "B": "Les graisses insaturées d’origine végétale",
+          "C": "Les graisses trans provenant des aliments industriels"
+        }
+      },
+      "de": {
+        "question": "Welche Fettart wird zum Schutz des Herzens empfohlen?",
+        "explanation": "Empfohlen werden ungesättigte Fette pflanzlichen Ursprungs: Pflanzenöle (Raps, Olive, Soja, Sonnenblume, Walnuss), Nüsse, Samen (Lein, Chia) sowie fetter Fisch (Omega-3).",
+        "choices": {
+          "A": "Gesättigte Fette tierischen Ursprungs",
+          "B": "Ungesättigte Fette pflanzlichen Ursprungs",
+          "C": "Transfette aus industriell verarbeiteten Lebensmitteln"
+        }
+      },
+      "en": {
+        "question": "Which type of fat is recommended to protect your heart?",
+        "explanation": "Unsaturated fats from plant sources are recommended: vegetable oils (rapeseed/canola, olive, soybean, sunflower, walnut), nuts, seeds (flax, chia), and also oily fish rich in omega-3.",
+        "choices": {
+          "A": "Saturated fats from animal sources",
+          "B": "Unsaturated fats from plant sources",
+          "C": "Trans fats from industrial foods"
+        }
+      }
+    },
+    "correctAnswers": [
+      "B"
+    ]
+  },
+  {
+    "id": "q-016",
+    "imageKey": "q-016.png",
+    "type": "single",
+    "topicTag": "nutrition",
+    "translations": {
+      "fr": {
+        "question": "Quelle est l’une des clés pour maintenir votre cœur en bonne santé ?",
+        "explanation": "Une alimentation protectrice pour le cœur repose sur : beaucoup de fruits et légumes, légumineuses et céréales complètes ; des graisses de bonne qualité ; et une réduction du sel, du sucre ajouté et des produits ultra-transformés.",
+        "choices": {
+          "A": "Manger beaucoup de fast-foods",
+          "B": "Consommer des aliments riches en graisses et sucres",
+          "C": "Opter pour une alimentation riche en végétaux, pauvre en sel et en sucres ajoutés"
+        }
+      },
+      "de": {
+        "question": "Was ist ein Schlüssel, um Ihr Herz gesund zu halten?",
+        "explanation": "Herzschützende Ernährung bedeutet: viel Obst und Gemüse, Hülsenfrüchte und Vollkorn; gute Fette; und weniger Salz, zugesetzten Zucker sowie stark verarbeitete Produkte.",
+        "choices": {
+          "A": "Viel Fast Food essen",
+          "B": "Lebensmittel mit viel Fett und Zucker konsumieren",
+          "C": "Eine pflanzenreiche Ernährung wählen, mit wenig Salz und zugesetztem Zucker"
+        }
+      },
+      "en": {
+        "question": "What is one key to keeping your heart healthy?",
+        "explanation": "A heart-protective diet focuses on plenty of fruits and vegetables, legumes and whole grains; good-quality fats; and reducing salt, added sugars, and ultra-processed foods.",
+        "choices": {
+          "A": "Eat a lot of fast food",
+          "B": "Consume foods high in fats and sugars",
+          "C": "Choose a plant-rich diet, low in salt and added sugars"
+        }
+      }
+    },
+    "correctAnswers": [
+      "C"
+    ]
+  },
+  {
+    "id": "q-017",
+    "imageKey": "q-017.png",
+    "type": "multiple",
+    "topicTag": "survey",
+    "translations": {
+      "fr": {
+        "question": "Avez-vous appris quelque chose à travers ce quizz ?",
+        "explanation": "Merci beaucoup pour votre participation ! Continuez à apprendre et à vous informer sur ces sujets de santé.",
+        "choices": {
+          "A": "Oui",
+          "B": "Non"
+        }
+      },
+      "de": {
+        "question": "Haben Sie durch dieses Quiz etwas gelernt?",
+        "explanation": "Vielen Dank für Ihre Teilnahme! Bleiben Sie dran und lernen Sie weiter über diese Gesundheitsthemen.",
+        "choices": {
+          "A": "Ja",
+          "B": "Nein"
+        }
+      },
+      "en": {
+        "question": "Did you learn something through this quiz?",
+        "explanation": "Thank you very much for taking part! Keep learning and exploring these health topics.",
+        "choices": {
+          "A": "Yes",
+          "B": "No"
+        }
+      }
+    },
+    "correctAnswers": ["Any"
+    ]
+  }
+]
