@@ -1,4 +1,4 @@
-export type QuestionType = 'single' | 'multiple';
+export type QuestionType = 'single' | 'multiple' | 'multiple_exact';
 
 export interface Question {
   id: string;

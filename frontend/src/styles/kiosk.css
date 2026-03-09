@@ -99,18 +99,28 @@ body {
 
 .welcome-title {
   margin-top: 0;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0;
   display: flex;
   flex-direction: column;
   gap: 0.25rem;
   line-height: 1.1;
 }
 
-.welcome-controls {
+.welcome-quiz-title {
   flex: 1;
   display: flex;
-  flex-direction: column;
+  align-items: center;
   justify-content: center;
+  text-align: center;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 900;
+  line-height: 1.05;
+}
+
+.welcome-controls {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 
 .welcome-language-grid {

@@ -5,7 +5,8 @@ import { TimedContinueButton } from '../components/TimedContinueButton';
 import type { QuestionView, SubmitAnswerResponse } from '../services/api/sessionClient';
 
 const DEFAULT_QUESTION_IMAGE = '/media/questions/q-default.png';
-const DEFAULT_MASCOT_IMAGE = '/media/mascot/mascot.png';
+const DEFAULT_MASCOT_IMAGE = '/media/mascot/mascot-nickname.png';
+const PARTIAL_MASCOT_IMAGE = '/media/mascot/mascot-partially.png';
 const FEEDBACK_TRANSITION_MS = 650;
 
 type Props = {
@@ -64,14 +65,26 @@ export function QuestionPage({
   }, [feedback, question.questionId]);
 
   const isLocked = Boolean(feedback);
+  const requiredSelectionCount = question.type === 'multiple_exact' ? question.requiredSelectionCount ?? 0 : 0;
   const allAnswersCorrect = Boolean(
     feedback &&
       feedback.correctKeys.length === 1 &&
       feedback.correctKeys[0]?.trim().toLowerCase() === 'any'
   );
   const canSubmit = useMemo(
-    () => selected.length > 0 && !isSubmitting && !isLocked,
-    [selected.length, isSubmitting, isLocked]
+    () => {
+      if (isSubmitting || isLocked) {
+        return false;
+      }
+      if (question.type === 'multiple_exact') {
+        if (requiredSelectionCount > 0) {
+          return selected.length === requiredSelectionCount;
+        }
+        return selected.length > 0;
+      }
+      return selected.length > 0;
+    },
+    [isSubmitting, isLocked, question.type, requiredSelectionCount, selected.length]
   );
 
   function toggleChoice(key: string): void {
@@ -81,6 +94,15 @@ export function QuestionPage({
     setSelected((current) => {
       if (question.type === 'multiple') {
         return current.includes(key) ? current.filter((choiceKey) => choiceKey !== key) : [...current, key];
+      }
+      if (question.type === 'multiple_exact') {
+        if (current.includes(key)) {
+          return current.filter((choiceKey) => choiceKey !== key);
+        }
+        if (requiredSelectionCount > 0 && current.length >= requiredSelectionCount) {
+          return current;
+        }
+        return [...current, key];
       }
       return current[0] === key ? [] : [key];
     });
@@ -146,8 +168,10 @@ export function QuestionPage({
     : '';
   const showResultStatus = Boolean(feedback && !allAnswersCorrect);
   const feedbackMascotSrc = feedback
-    ? feedback.correct || isPartial
+    ? feedback.correct
       ? '/media/mascot/mascot-correct.png'
+      : isPartial
+        ? PARTIAL_MASCOT_IMAGE
       : '/media/mascot/mascot-wrong.png'
     : DEFAULT_MASCOT_IMAGE;
   const questionImageSrc = question.imageKey

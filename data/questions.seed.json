@@ -2,7 +2,7 @@
   {
     "id": "q-001",
     "imageKey": "q-001.png",
-    "type": "multiple",
+    "type": "multiple_exact",
     "topicTag": "health-basics",
     "translations": {
       "fr": {
@@ -161,48 +161,46 @@
   {
     "id": "q-005",
     "imageKey": "q-005.png",
-    "type": "single",
+    "type": "multiple_exact",
     "topicTag": "addictions",
     "translations": {
       "fr": {
         "question": "Pourquoi l’accompagnement par un professionnel de santé augmente-t-il les chances de réussir un sevrage tabagique ?",
         "explanation": "Sans aide, seules 3 à 5 % des personnes arrêtent durablement. Avec accompagnement et traitement, le taux atteint 15 à 25 % à 6 mois.",
         "choices": {
-          "A": "Le taux de réussite sans aide est faible",
-          "B": "L’accompagnement et le traitement augmentent le succès",
-          "C": "Le soutien renforce la motivation et prévient les rechutes",
-          "D": "Toutes les réponses ci-dessus"
+          "A": "Le professionnel de santé apporte des conseils adaptés et un suivi structuré",
+          "B": "Un accompagnement permet d’utiliser des traitements et des stratégies efficaces",
+          "C": "L’arrêt du tabac devient automatique dès qu’une personne est suivie"        
         }
       },
       "de": {
         "question": "Warum erhöht die Begleitung durch Fachpersonal die Erfolgschancen beim Rauchstopp?",
         "explanation": "Ohne Hilfe schaffen es nur 3–5 %. Mit professioneller Begleitung und Therapie liegt die Erfolgsquote bei 15–25 % nach 6 Monaten.",
         "choices": {
-          "A": "Die Erfolgsquote ohne Hilfe ist niedrig",
-          "B": "Begleitung und Behandlung erhöhen den Erfolg",
-          "C": "Unterstützung stärkt Motivation und verhindert Rückfälle",
-          "D": "Alle oben genannten Antworten"
+          "A": "Gesundheitspersonal bietet individuelle Beratung und eine strukturierte Begleitung",
+          "B": "Durch die Begleitung können wirksame Behandlungen und Strategien eingesetzt werden",
+          "C": "Der Rauchstopp gelingt automatisch, sobald eine Person begleitet wird"        
         }
       },
       "en": {
         "question": "Why does support from a health professional increase the chances of quitting smoking?",
         "explanation": "Without help, only 3–5% succeed long-term. With professional support and treatment, success rates reach 15–25% after 6 months.",
         "choices": {
-          "A": "Success rates without help are low",
-          "B": "Support combined with treatment improves success",
-          "C": "Support boosts motivation and prevents relapse",
-          "D": "All of the above"
+          "A": "A health professional provides personalized advice and structured follow-up",
+          "B": "Support allows the use of effective treatments and cessation strategies",
+          "C": "Quitting smoking becomes automatic once someone is supported"        
         }
       }
     },
     "correctAnswers": [
-      "D"
+      "A",
+      "B"
     ]
   },
   {
     "id": "q-006",
     "imageKey": "q-006.png",
-    "type": "multiple",
+    "type": "single",
     "topicTag": "addictions",
     "translations": {
       "fr": {
@@ -318,16 +316,16 @@
         }
       },
       "de": {
-        "question": "Sieht das luxemburgische Arbeitsgesetz Stillpausen vor?",
-        "explanation": "Gemäß Artikel L.336-3 des Arbeitsgesetzbuchs muss der Arbeitgeber auf Antrag stillenden Arbeitnehmerinnen Stillzeiten während des Arbeitstags gewähren (2×45 Minuten bei Vollzeit). Diese Zeit gilt als Arbeitszeit und wird normal vergütet.",
+        "question": "Sieht das Arbeitsgesetzbuch in Luxemburg Stillpausen vor?",
+        "explanation": "Gemäß Artikel L.336-3 des Arbeitsgesetzbuches: Auf Antrag der stillenden Arbeitnehmerin muss der Arbeitgeber während des Arbeitstages Stillzeiten gewähren (2 × 45 Minuten bei Vollzeitbeschäftigung). Diese Zeit gilt als tatsächliche Arbeitszeit und wird normal vergütet.",
         "choices": {
           "A": "Richtig",
           "B": "Falsch"
         }
       },
       "en": {
-        "question": "Does Luxembourg labor law provide breastfeeding breaks?",
-        "explanation": "According to Article L.336-3 of the Labor Code, upon request, breastfeeding employees must be granted breastfeeding time during the workday (2×45 minutes for full-time). This time counts as working time and is paid normally.",
+        "question": "Does the Labour Code in Luxembourg provide for breastfeeding breaks?",
+        "explanation": "According to Article L.336-3 of the Labour Code: at the request of the breastfeeding employee, the employer must grant breastfeeding time during the working day (2 × 45 minutes for full-time work). This time is counted as actual working time and is paid normally.",
         "choices": {
           "A": "True",
           "B": "False"
@@ -397,12 +395,12 @@
       },
       "de": {
         "question": "Welche Rolle kann ein Unternehmen bei der Suchtprävention spielen?",
-        "explanation": "Unternehmen können viel beitragen: sensibilisieren, frühzeitig erkennen, unterstützen und an passende Hilfsangebote verweisen. Ziel ist nicht zu sanktionieren oder Gesundheitsfachpersonen zu ersetzen.",
+        "explanation": "Unternehmen können viel beitragen: sensibilisieren, frühzeitig erkennen, unterstützen und an passende Hilfsangebote verweisen. Ziel ist nicht zu sanktionieren oder Gesundheitspersonal zu ersetzen.",
         "choices": {
           "A": "Keine – das ist reine Privatsache",
           "B": "Nur sanktionieren",
           "C": "Sensibilisierung, Früherkennung und Unterstützung/Weiterleitung ermöglichen",
-          "D": "Gesundheitsfachpersonen ersetzen"
+          "D": "Gesundheitspersonal ersetzen"
         }
       },
       "en": {
@@ -469,7 +467,7 @@
     "translations": {
       "fr": {
         "question": "Comment peut-on soulager les personnes souffrant d’acouphènes ? (plusieurs réponses possibles)",
-        "explanation": "Les médicaments peuvent aider s’ils traitent une cause identifiable (infection, inflammation, surdité brusque, maladie de Ménière) ou s’ils réduisent l’anxiété/l’insomnie associées. Les générateurs de bruit peuvent diminuer la perception de l’acouphène. Les thérapies psychologiques (notamment TCC) aident à mieux le tolérer et à réduire l’intensité perçue.",
+        "explanation": "Les médicaments aident selon la cause (infection, inflammation, surdité brusque, maladie de Ménière) ou en cas d’anxiété et d’insomnie. Les générateurs de bruit réduisent la perception en le masquant. Les thérapies psychologiques favorisent l’acceptation et diminuent ainsi l’intensité perçue.",
         "choices": {
           "A": "Ce n’est pas possible",
           "B": "Avec des médicaments",
@@ -479,7 +477,7 @@
       },
       "de": {
         "question": "Wie kann man Menschen mit Tinnitus helfen? (mehrere Antworten möglich)",
-        "explanation": "Medikamente können helfen, wenn eine behandelbare Ursache vorliegt (Infektion, Entzündung, Hörsturz, Morbus Menière) oder um Angst/Schlafstörungen zu lindern. Geräuschgeneratoren können den Tinnitus überdecken. Psychologische Therapien (v. a. KVT) verbessern den Umgang und senken die wahrgenommene Intensität.",
+        "explanation": "Medikamente helfen je nach Ursache (Infektion, Entzündung, Hörsturz, Morbus Menière) oder bei Angst und Schlafproblemen. Geräuschgeneratoren mindern die Wahrnehmung durch Überdecken. Psychologische Therapien fördern Akzeptanz und Toleranz und senken so die empfundene Intensität.",
         "choices": {
           "A": "Das ist nicht möglich",
           "B": "Mit Medikamenten",
@@ -489,7 +487,7 @@
       },
       "en": {
         "question": "How can tinnitus sufferers be relieved? (multiple answers possible)",
-        "explanation": "Medication may help if it treats an identifiable cause (infection, inflammation, sudden hearing loss, Ménière’s disease) or reduces associated anxiety/insomnia. Noise generators can mask tinnitus and reduce perception. Psychological therapies (especially CBT) help the brain react differently, improving tolerance and reducing perceived intensity.",
+        "explanation": "Medication helps depending on the cause (infection, inflammation, sudden hearing loss, Ménière’s disease) or for anxiety and insomnia. Noise generators reduce perception by masking the sound. Psychological therapies support acceptance and tolerance, lowering the perceived intensity.",
         "choices": {
           "A": "It’s not possible",
           "B": "With medication",
@@ -512,7 +510,7 @@
     "translations": {
       "fr": {
         "question": "À partir de quel niveau le bruit commence-t-il à nuire à votre santé si l’exposition est régulière ? (une seule réponse possible)",
-        "explanation": "Une exposition régulière à 60 dB (conversation normale / bureau animé) maintient le corps en stimulation permanente : stress, tension artérielle, fatigue. À long terme : sommeil, concentration et santé cardiovasculaire. À partir de 85 dB, l’audition est directement impactée.",
+        "explanation": "Une exposition régulière à 60 dB (conversation normale, bureau animé) maintient le corps en alerte, augmentant stress, tension et fatigue. Ceci peut perturber le sommeil, la concentration et la santé cardiovasculaire. À 85 dB, l’audition est directement affectée.",
         "choices": {
           "A": "60 dB (Bureau animé / conversation normale)",
           "B": "70 dB (Circulation urbaine / restaurant animé)",
@@ -522,7 +520,7 @@
       },
       "de": {
         "question": "Ab welchem Lärmpegel beginnt regelmäßige Exposition Ihrer Gesundheit zu schaden? (nur eine Antwort möglich)",
-        "explanation": "Regelmäßige Belastung mit 60 dB (normales Gespräch / lebhaftes Büro) hält den Körper dauerhaft in Alarmbereitschaft: mehr Stress, höherer Blutdruck, Müdigkeit. Langfristig leidet Schlaf, Konzentration und Herz-Kreislauf-Gesundheit. Ab 85 dB wird das Gehör direkt geschädigt.",
+        "explanation": "Regelmäßige Lärmbelastung von 60 dB (normales Gespräch, belebtes Büro) hält den Körper in Alarmbereitschaft, erhöht Stress, Blutdruck und Müdigkeit. Dies kann Schlaf, Konzentration und Herz-Kreislauf-Gesundheit beeinträchtigen. Ab 85 dB wird das Gehör direkt geschädigt.",
         "choices": {
           "A": "60 dB (lebhaftes Büro / normales Gespräch)",
           "B": "70 dB (Stadtverkehr / lebhaftes Restaurant)",
@@ -532,7 +530,7 @@
       },
       "en": {
         "question": "From what noise level does regular exposure start to harm your health? (single answer)",
-        "explanation": "Regular exposure to 60 dB (normal conversation / busy office) keeps the body in a constant state of stimulation, increasing stress, blood pressure, and fatigue. Over time, it affects sleep, concentration, and cardiovascular health. From 85 dB, hearing is directly impacted.",
+        "explanation": "Regular exposure to 60 dB (normal conversation, busy office) keeps the body alert, increasing stress, blood pressure, and fatigue. This can affect sleep, concentration, and cardiovascular health. At 85 dB, hearing is directly impacted.",
         "choices": {
           "A": "60 dB (Busy office / normal conversation)",
           "B": "70 dB (Urban traffic / busy restaurant)",
@@ -604,7 +602,7 @@
         "choices": {
           "A": "Viel Fast Food essen",
           "B": "Lebensmittel mit viel Fett und Zucker konsumieren",
-          "C": "Eine pflanzenreiche Ernährung wählen, mit wenig Salz und zugesetztem Zucker"
+          "C": "Eine pflanzenbasierte Ernährung mit wenig Salz und Zucker wählen"
         }
       },
       "en": {
@@ -624,7 +622,7 @@
   {
     "id": "q-017",
     "imageKey": "q-017.png",
-    "type": "multiple",
+    "type": "single",
     "topicTag": "survey",
     "translations": {
       "fr": {

@@ -184,6 +184,15 @@ export class AnswerService {
       return { status: 'invalid_selection' };
     }
 
+    if (question.type === 'multiple_exact') {
+      const requiredSelectionCount = question.correctKeys.filter(
+        (key) => key.trim().toLowerCase() !== 'any'
+      ).length;
+      if (requiredSelectionCount < 1 || uniqueKeys.length !== requiredSelectionCount) {
+        return { status: 'invalid_selection' };
+      }
+    }
+
     const anyCorrectMode = isAnyCorrectMode(question.correctKeys);
     const ratio = anyCorrectMode ? 1 : scoreQuestion(question.type, uniqueKeys, question.correctKeys);
     const awardedPoints = getAwardedPoints(ratio);

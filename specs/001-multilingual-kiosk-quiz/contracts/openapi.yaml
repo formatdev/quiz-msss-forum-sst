@@ -186,7 +186,7 @@ components:
           type: string
         type:
           type: string
-          enum: [single, multiple]
+          enum: [single, multiple, multiple_exact]
         prompt:
           type: string
         choices:
@@ -195,6 +195,9 @@ components:
             $ref: "#/components/schemas/Choice"
         imageKey:
           type: string
+          nullable: true
+        requiredSelectionCount:
+          type: integer
           nullable: true
         progress:
           $ref: "#/components/schemas/Progress"

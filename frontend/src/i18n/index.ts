@@ -4,9 +4,10 @@ import { initReactI18next } from 'react-i18next';
 const resources = {
   fr: {
     translation: {
-      title: 'Ministère de la Santé - Quiz Forum SST',
+      title: 'Ministère de la Santé et de la Sécurité Sociale - Quiz Forum SST',
       titleLine1: 'Ministère de la Santé',
-      titleLine2: 'Quiz Forum SST',
+      titleLine2: 'et de la Sécurité Sociale',
+      titleLine3: 'Quiz Forum SST',
       chooseLanguage: 'Choisis ta langue',
       start: 'Commencer',
       nicknameTitle: 'Surnom (optionnel)',
@@ -52,9 +53,10 @@ const resources = {
   },
   de: {
     translation: {
-      title: 'Ministère de la Santé - Quiz Forum SST',
+      title: 'Ministère de la Santé et de la Sécurité Sociale - Quiz Forum SST',
       titleLine1: 'Ministère de la Santé',
-      titleLine2: 'Quiz Forum SST',
+      titleLine2: 'et de la Sécurité Sociale',
+      titleLine3: 'Quiz Forum SST',
       chooseLanguage: 'Waehle deine Sprache',
       start: 'Starten',
       nicknameTitle: 'Spitzname (optional)',
@@ -100,9 +102,10 @@ const resources = {
   },
   en: {
     translation: {
-      title: 'Ministère de la Santé - Quiz Forum SST',
+      title: 'Ministère de la Santé et de la Sécurité Sociale - Quiz Forum SST',
       titleLine1: 'Ministère de la Santé',
-      titleLine2: 'Quiz Forum SST',
+      titleLine2: 'et de la Sécurité Sociale',
+      titleLine3: 'Quiz Forum SST',
       chooseLanguage: 'Choose your language',
       start: 'Start',
       nicknameTitle: 'Nickname (optional)',

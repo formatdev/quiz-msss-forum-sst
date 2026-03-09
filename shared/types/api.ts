@@ -15,10 +15,11 @@ export interface StartSessionResponse {
 
 export interface QuestionView {
   questionId: string;
-  type: 'single' | 'multiple';
+  type: 'single' | 'multiple' | 'multiple_exact';
   prompt: string;
   choices: Array<{ key: string; label: string }>;
   imageKey: string | null;
+  requiredSelectionCount: number | null;
   progress: {
     current: number;
     total: number;

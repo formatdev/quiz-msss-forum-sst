@@ -88,4 +88,58 @@ describe('result flow', () => {
     expect(resultRes.body.maxScore).toBe(1);
     expect(resultRes.body.percentage).toBe(100);
   });
+
+  it('requires exact selection count for multiple_exact questions', async () => {
+    const setup = await setupTestApp();
+    cleanup = setup.close;
+
+    getDb().prepare('UPDATE questions SET type = ?, correct_option_keys_json = ? WHERE id = ?').run(
+      'multiple_exact',
+      JSON.stringify(['A', 'B']),
+      'q-001'
+    );
+
+    const sessionRes = await request(setup.app.server)
+      .post('/api/sessions')
+      .send({ lang: 'fr', nickname: 'Player Exact' });
+    expect(sessionRes.status).toBe(201);
+    const sessionId = sessionRes.body.sessionId as string;
+
+    const invalidRes = await request(setup.app.server)
+      .post(`/api/sessions/${sessionId}/answers`)
+      .send({ questionId: 'q-001', selectedKeys: ['A'] });
+    expect(invalidRes.status).toBe(400);
+    expect(invalidRes.body.error).toBe('invalid_selection');
+
+    const validRes = await request(setup.app.server)
+      .post(`/api/sessions/${sessionId}/answers`)
+      .send({ questionId: 'q-001', selectedKeys: ['A', 'B'] });
+    expect(validRes.status).toBe(200);
+    expect(validRes.body.correct).toBe(true);
+  });
+
+  it('awards partial points for partially correct multiple_exact selection', async () => {
+    const setup = await setupTestApp();
+    cleanup = setup.close;
+
+    getDb().prepare('UPDATE questions SET type = ?, correct_option_keys_json = ? WHERE id = ?').run(
+      'multiple_exact',
+      JSON.stringify(['A', 'C']),
+      'q-001'
+    );
+
+    const sessionRes = await request(setup.app.server)
+      .post('/api/sessions')
+      .send({ lang: 'fr', nickname: 'Player Exact Partial' });
+    expect(sessionRes.status).toBe(201);
+    const sessionId = sessionRes.body.sessionId as string;
+
+    const partialRes = await request(setup.app.server)
+      .post(`/api/sessions/${sessionId}/answers`)
+      .send({ questionId: 'q-001', selectedKeys: ['A', 'B'] });
+    expect(partialRes.status).toBe(200);
+    expect(partialRes.body.correct).toBe(false);
+    expect(partialRes.body.awardedPoints).toBe(0.5);
+    expect(partialRes.body.maxPoints).toBe(1);
+  });
 });

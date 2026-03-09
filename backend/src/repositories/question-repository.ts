@@ -3,10 +3,11 @@ import { getDb } from '../db/client.js';
 
 export type QuestionView = {
   questionId: string;
-  type: 'single' | 'multiple';
+  type: 'single' | 'multiple' | 'multiple_exact';
   prompt: string;
   choices: Array<{ key: string; label: string }>;
   imageKey: string | null;
+  requiredSelectionCount: number | null;
   progress: {
     current: number;
     total: number;
@@ -15,7 +16,7 @@ export type QuestionView = {
 
 export type QuestionAnswerContext = {
   questionId: string;
-  type: 'single' | 'multiple';
+  type: 'single' | 'multiple' | 'multiple_exact';
   explanation: string;
   correctKeys: string[];
   validChoiceKeys: string[];
@@ -24,17 +25,18 @@ export type QuestionAnswerContext = {
 
 type RawQuestionRow = {
   question_id: string;
-  type: 'single' | 'multiple';
+  type: 'single' | 'multiple' | 'multiple_exact';
   image_key: string | null;
   question_text: string | null;
   option_texts_json: string | null;
+  correct_option_keys_json: string;
   answered_count: number;
   total_count: number;
 };
 
 type RawAnswerContextRow = {
   question_id: string;
-  type: 'single' | 'multiple';
+  type: 'single' | 'multiple' | 'multiple_exact';
   explanation_text: string | null;
   option_texts_json: string | null;
   correct_option_keys_json: string;
@@ -69,6 +71,7 @@ export class QuestionRepository {
           q.id AS question_id,
           q.type AS type,
           q.image_key AS image_key,
+          q.correct_option_keys_json AS correct_option_keys_json,
           COALESCE(qt_req.question_text, qt_fr.question_text) AS question_text,
           COALESCE(qt_req.option_texts_json, qt_fr.option_texts_json) AS option_texts_json,
           (SELECT answered_count FROM answered) AS answered_count,
@@ -93,8 +96,13 @@ export class QuestionRepository {
     }
 
     const choicesMap = JSON.parse(row.option_texts_json ?? '{}') as Record<string, string>;
+    const correctKeys = JSON.parse(row.correct_option_keys_json ?? '[]') as string[];
     const choices = Object.entries(choicesMap).map(([key, label]) => ({ key, label }));
     const current = Math.min(row.total_count || 0, (row.answered_count || 0) + 1);
+    const requiredSelectionCount =
+      row.type === 'multiple_exact'
+        ? correctKeys.filter((key) => key.trim().toLowerCase() !== 'any').length
+        : null;
 
     return {
       questionId: row.question_id,
@@ -102,6 +110,7 @@ export class QuestionRepository {
       prompt: row.question_text ?? '',
       choices,
       imageKey: row.image_key,
+      requiredSelectionCount,
       progress: {
         current,
         total: row.total_count ?? 0

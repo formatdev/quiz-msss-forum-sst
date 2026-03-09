@@ -24,6 +24,7 @@ export function WelcomePage({ selectedLanguage, onLanguageSelect, onStart }: Pro
             <span>{t('titleLine1')}</span>
             <span>{t('titleLine2')}</span>
           </h1>
+          <div className="welcome-quiz-title">{t('titleLine3')}</div>
           <div className="welcome-controls">
             <div className="welcome-language-grid">
               {LANGUAGES.map((lang) => (

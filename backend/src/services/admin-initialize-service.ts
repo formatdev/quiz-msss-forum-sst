@@ -14,7 +14,7 @@ type SeedTranslation = {
 
 type SeedQuestion = {
   id: string;
-  type: 'single' | 'multiple';
+  type: 'single' | 'multiple' | 'multiple_exact';
   topicTag: string;
   imageKey?: string;
   imagePrompt?: string;
@@ -75,6 +75,14 @@ function validateQuestion(question: SeedQuestion): string[] {
     if (question.type === 'single' && question.correctAnswers.length !== 1) {
       issues.push(
         `Question ${question.id} is type "single" but has ${question.correctAnswers.length} correct answers.`
+      );
+    }
+    if (question.type === 'multiple_exact' && hasAnyWildcard) {
+      issues.push(`Question ${question.id} is type "multiple_exact" and cannot use "Any".`);
+    }
+    if (question.type === 'multiple_exact' && question.correctAnswers.length < 2) {
+      issues.push(
+        `Question ${question.id} is type "multiple_exact" but has fewer than 2 correct answers.`
       );
     }
   }

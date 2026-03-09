@@ -27,6 +27,7 @@ test('language select + nickname skip + first question render', async ({ page })
           { key: 'B', label: 'Choix B' }
         ],
         imageKey: null,
+        requiredSelectionCount: null,
         progress: { current: 1, total: 1 }
       })
     });

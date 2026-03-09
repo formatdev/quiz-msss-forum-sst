@@ -24,13 +24,42 @@ export function scoreMultiple(selected: string[], correct: string[]): number {
   return bounded / correctSet.size;
 }
 
+export function scoreMultipleExact(selected: string[], correct: string[]): number {
+  const selectedSet = new Set(selected);
+  const correctSet = new Set(correct);
+  if (correctSet.size === 0) {
+    return 0;
+  }
+  if (selectedSet.size !== correctSet.size) {
+    return 0;
+  }
+
+  let matchCount = 0;
+  for (const key of selectedSet) {
+    if (correctSet.has(key)) {
+      matchCount += 1;
+    }
+  }
+
+  if (matchCount === correctSet.size) {
+    return 1;
+  }
+  if (matchCount > 0) {
+    return matchCount / correctSet.size;
+  }
+  return 0;
+}
+
 export function scoreQuestion(
-  mode: 'single' | 'multiple',
+  mode: 'single' | 'multiple' | 'multiple_exact',
   selected: string[],
   correct: string[]
 ): number {
   if (mode === 'single') {
     return scoreSingle(selected, correct);
+  }
+  if (mode === 'multiple_exact') {
+    return scoreMultipleExact(selected, correct);
   }
   return scoreMultiple(selected, correct);
 }
