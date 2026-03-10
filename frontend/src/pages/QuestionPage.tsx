@@ -42,6 +42,7 @@ export function QuestionPage({
   const [selected, setSelected] = useState<string[]>([]);
   const [feedbackReady, setFeedbackReady] = useState(false);
   const [fireworkBurstKey, setFireworkBurstKey] = useState(0);
+  const isMultiQuestion = question.type !== 'single';
 
   useEffect(() => {
     setSelected([]);
@@ -215,11 +216,16 @@ export function QuestionPage({
       <main className="kiosk-shell">
         <div className="quiz-split">
           <section className="quiz-panel quiz-panel-left">
-          <h1>
-            {t('questionProgressTitle', {
-              current: question.progress.current,
-              total: question.progress.total
-            })}
+          <h1 className="question-progress-header">
+            <span>
+              {t('questionProgressTitle', {
+                current: question.progress.current,
+                total: question.progress.total
+              })}
+            </span>
+            {isMultiQuestion ? (
+              <span className="question-progress-multi-hint">({t('multiAnswerShort')})</span>
+            ) : null}
           </h1>
           <div className="question-content">
             <h2>{question.prompt}</h2>

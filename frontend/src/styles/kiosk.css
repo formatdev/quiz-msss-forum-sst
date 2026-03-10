@@ -75,6 +75,18 @@ body {
   margin-bottom: 0.25rem;
 }
 
+.question-progress-header {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+}
+
+.question-progress-multi-hint {
+  font-size: 0.72em;
+  font-weight: 800;
+  color: #475569;
+}
+
 .quiz-panel-left h2 {
   margin: 0;
 }

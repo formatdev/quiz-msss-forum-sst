@@ -161,40 +161,36 @@
   {
     "id": "q-005",
     "imageKey": "q-005.png",
-    "type": "multiple_exact",
+    "type": "single",
     "topicTag": "addictions",
     "translations": {
       "fr": {
-        "question": "Pourquoi l’accompagnement par un professionnel de santé augmente-t-il les chances de réussir un sevrage tabagique ?",
-        "explanation": "Sans aide, seules 3 à 5 % des personnes arrêtent durablement. Avec accompagnement et traitement, le taux atteint 15 à 25 % à 6 mois.",
+        "question": "Est-ce que l’accompagnement par un professionnel de santé augmente-t-il les chances de réussir un sevrage tabagique ?",
+        "explanation": "Oui. Sans aide, seules 3 à 5 % des personnes arrêtent durablement. Avec accompagnement et traitement, le taux atteint 15 à 25 % à 6 mois. Le soutien renforce la motivation et prévient les rechutes.",
         "choices": {
-          "A": "Le professionnel de santé apporte des conseils adaptés et un suivi structuré",
-          "B": "Un accompagnement permet d’utiliser des traitements et des stratégies efficaces",
-          "C": "L’arrêt du tabac devient automatique dès qu’une personne est suivie"        
+          "A": "Oui. L’accompagnement et le traitement améliorent les résultats",
+          "B": "Non. Le taux de réussite avec aide est aussi faible que sans aide"
         }
       },
       "de": {
-        "question": "Warum erhöht die Begleitung durch Fachpersonal die Erfolgschancen beim Rauchstopp?",
-        "explanation": "Ohne Hilfe schaffen es nur 3–5 %. Mit professioneller Begleitung und Therapie liegt die Erfolgsquote bei 15–25 % nach 6 Monaten.",
+        "question": "Erhöht die Begleitung durch Gesundheitspersonal die Chancen, mit dem Rauchen aufzuhören?",
+        "explanation": "Ja. Ohne Hilfe schaffen es nur 3–5 %. Mit professioneller Begleitung und Therapie liegt die Erfolgsquote bei 15–25 % nach 6 Monaten. Unterstützung stärkt die Motivation und beugt Rückfällen vor.",
         "choices": {
-          "A": "Gesundheitspersonal bietet individuelle Beratung und eine strukturierte Begleitung",
-          "B": "Durch die Begleitung können wirksame Behandlungen und Strategien eingesetzt werden",
-          "C": "Der Rauchstopp gelingt automatisch, sobald eine Person begleitet wird"        
+          "A": "Ja. Begleitung und Behandlung verbessern die Ergebnisse",
+          "B": "Nein. Die Erfolgsquote mit Hilfe ist genauso niedrig wie ohne Hilfe"
         }
       },
       "en": {
-        "question": "Why does support from a health professional increase the chances of quitting smoking?",
-        "explanation": "Without help, only 3–5% succeed long-term. With professional support and treatment, success rates reach 15–25% after 6 months.",
+        "question": "Does support from a health professional increase the chances of quitting smoking?",
+        "explanation": "Yes. Without help, only 3–5% succeed long-term. With professional support and treatment, success rates reach 15–25% after 6 months. Support strengthens motivation and helps prevent relapse.",
         "choices": {
-          "A": "A health professional provides personalized advice and structured follow-up",
-          "B": "Support allows the use of effective treatments and cessation strategies",
-          "C": "Quitting smoking becomes automatic once someone is supported"        
+          "A": "Yes. Support and treatment improve outcomes",
+          "B": "No. Success rates with help are just as low as without help"
         }
       }
     },
     "correctAnswers": [
-      "A",
-      "B"
+      "A"
     ]
   },
   {
@@ -466,7 +462,7 @@
     "topicTag": "health-basics",
     "translations": {
       "fr": {
-        "question": "Comment peut-on soulager les personnes souffrant d’acouphènes ? (plusieurs réponses possibles)",
+        "question": "Comment peut-on soulager les personnes souffrant d’acouphènes ?",
         "explanation": "Les médicaments aident selon la cause (infection, inflammation, surdité brusque, maladie de Ménière) ou en cas d’anxiété et d’insomnie. Les générateurs de bruit réduisent la perception en le masquant. Les thérapies psychologiques favorisent l’acceptation et diminuent ainsi l’intensité perçue.",
         "choices": {
           "A": "Ce n’est pas possible",
@@ -476,7 +472,7 @@
         }
       },
       "de": {
-        "question": "Wie kann man Menschen mit Tinnitus helfen? (mehrere Antworten möglich)",
+        "question": "Wie kann man Menschen mit Tinnitus helfen?",
         "explanation": "Medikamente helfen je nach Ursache (Infektion, Entzündung, Hörsturz, Morbus Menière) oder bei Angst und Schlafproblemen. Geräuschgeneratoren mindern die Wahrnehmung durch Überdecken. Psychologische Therapien fördern Akzeptanz und Toleranz und senken so die empfundene Intensität.",
         "choices": {
           "A": "Das ist nicht möglich",
@@ -486,7 +482,7 @@
         }
       },
       "en": {
-        "question": "How can tinnitus sufferers be relieved? (multiple answers possible)",
+        "question": "How can tinnitus sufferers be relieved?",
         "explanation": "Medication helps depending on the cause (infection, inflammation, sudden hearing loss, Ménière’s disease) or for anxiety and insomnia. Noise generators reduce perception by masking the sound. Psychological therapies support acceptance and tolerance, lowering the perceived intensity.",
         "choices": {
           "A": "It’s not possible",
@@ -509,7 +505,7 @@
     "topicTag": "noise-health",
     "translations": {
       "fr": {
-        "question": "À partir de quel niveau le bruit commence-t-il à nuire à votre santé si l’exposition est régulière ? (une seule réponse possible)",
+        "question": "À partir de quel niveau le bruit commence-t-il à nuire à votre santé si l’exposition est régulière ?",
         "explanation": "Une exposition régulière à 60 dB (conversation normale, bureau animé) maintient le corps en alerte, augmentant stress, tension et fatigue. Ceci peut perturber le sommeil, la concentration et la santé cardiovasculaire. À 85 dB, l’audition est directement affectée.",
         "choices": {
           "A": "60 dB (Bureau animé / conversation normale)",
@@ -519,7 +515,7 @@
         }
       },
       "de": {
-        "question": "Ab welchem Lärmpegel beginnt regelmäßige Exposition Ihrer Gesundheit zu schaden? (nur eine Antwort möglich)",
+        "question": "Ab welchem Lärmpegel beginnt regelmäßige Exposition Ihrer Gesundheit zu schaden?",
         "explanation": "Regelmäßige Lärmbelastung von 60 dB (normales Gespräch, belebtes Büro) hält den Körper in Alarmbereitschaft, erhöht Stress, Blutdruck und Müdigkeit. Dies kann Schlaf, Konzentration und Herz-Kreislauf-Gesundheit beeinträchtigen. Ab 85 dB wird das Gehör direkt geschädigt.",
         "choices": {
           "A": "60 dB (lebhaftes Büro / normales Gespräch)",
@@ -529,7 +525,7 @@
         }
       },
       "en": {
-        "question": "From what noise level does regular exposure start to harm your health? (single answer)",
+        "question": "From what noise level does regular exposure start to harm your health?",
         "explanation": "Regular exposure to 60 dB (normal conversation, busy office) keeps the body alert, increasing stress, blood pressure, and fatigue. This can affect sleep, concentration, and cardiovascular health. At 85 dB, hearing is directly impacted.",
         "choices": {
           "A": "60 dB (Busy office / normal conversation)",
